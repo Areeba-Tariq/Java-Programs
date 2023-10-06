@@ -20,7 +20,7 @@ class BinarySearch {
     }
 }
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
         Integer[] intArray = {1, 2, 3, 4, 5, 6};
         String[] stringArray = {"A", "B", "C", "D", "E", "F"};
@@ -32,4 +32,3 @@ public class Main {
         System.out.println("Index of 'E' in stringArray: " + stringIndex); // Output: 4
 
     }
-}
