@@ -35,32 +35,32 @@ class Student {
 
 public class Main {
     public static void main(String[] args) {
-        String csvFilePath = "src\\list.csv"; // Replace with your CSV file path
-        List<Student> students = new ArrayList<>();
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(csvFilePath))) {
-            String line;
-            boolean headerSkipped = false;
-            while ((line = reader.readLine()) != null) {
-                if (!headerSkipped) {
-                    headerSkipped = true;
-                    continue; // Skip the header line
-                }
-                String[] parts = line.split(",");
-                if (parts.length == 5) {
-                    String name = parts[0].trim();
-                    int age = Integer.parseInt(parts[1].trim());
-                    String location = parts[2].trim();
-                    int scdMarks = Integer.parseInt(parts[3].trim());
-                    int pfMarks = Integer.parseInt(parts[4].trim());
-
-                    Student student = new Student(name, age, location, scdMarks, pfMarks);
-                    students.add(student);
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        String csvFilePath = "src\\list.csv"; // Replace with your CSV file path
+//        List<Student> students = new ArrayList<>();
+//
+//        try (BufferedReader reader = new BufferedReader(new FileReader(csvFilePath))) {
+//            String line;
+//            boolean headerSkipped = false;
+//            while ((line = reader.readLine()) != null) {
+//                if (!headerSkipped) {
+//                    headerSkipped = true;
+//                    continue; // Skip the header line
+//                }
+//                String[] parts = line.split(",");
+//                if (parts.length == 5) {
+//                    String name = parts[0].trim();
+//                    int age = Integer.parseInt(parts[1].trim());
+//                    String location = parts[2].trim();
+//                    int scdMarks = Integer.parseInt(parts[3].trim());
+//                    int pfMarks = Integer.parseInt(parts[4].trim());
+//
+//                    Student student = new Student(name, age, location, scdMarks, pfMarks);
+//                    students.add(student);
+//                }
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
         // Calculate the average of pfMarks and scdMarks
         double totalPfMarks = 0;
